@@ -1,0 +1,64 @@
+{
+  "examples": [
+    {
+      "id": 1,
+      "name": "Terre",
+      "mass": 5.972,
+      "telluric": true,
+      "habitable": true,
+      "atmosphereComposition": "N2 78%, O2 21%, Ar 0.93%, autres gaz traces",
+      "orbitingRadius": 149.6,
+      "revolutionTime": 365.25
+    },
+    {
+      "id": 2,
+      "name": "Jupiter",
+      "mass": 1898.0,
+      "telluric": false,
+      "habitable": false,
+      "atmosphereComposition": "H2 89%, He 10%, traces de CH4, NH3, H2O",
+      "orbitingRadius": 778.5,
+      "revolutionTime": 4333.0
+    },
+    {
+      "id": 3,
+      "name": "Mars",
+      "mass": 0.6417,
+      "telluric": true,
+      "habitable": false,
+      "atmosphereComposition": "CO2 95.3%, N2 2.7%, Ar 2.1%, traces O2, CO",
+      "orbitingRadius": 227.9,
+      "revolutionTime": 687.0
+    },
+    {
+      "id": 4,
+      "name": "Vénus",
+      "mass": 4.867,
+      "telluric": true,
+      "habitable": false,
+      "atmosphereComposition": "CO2 96.5%, N2 3.5%",
+      "orbitingRadius": 108.2,
+      "revolutionTime": 224.7
+    },
+    {
+      "id": 5,
+      "name": "Saturne",
+      "mass": 568.3,
+      "telluric": false,
+      "habitable": false,
+      "atmosphereComposition": "H2 96%, He 3%, traces CH4, NH3, H2O",
+      "orbitingRadius": 1429.0,
+      "revolutionTime": 10759.0
+    },
+    {
+      "id": 6,
+      "name": "Mercure",
+      "mass": 0.3301,
+      "telluric": true,
+      "habitable": false,
+      "atmosphereComposition": "Atome d'oxygène, sodium, hydrogène",
+      "orbitingRadius": 57.9,
+      "revolutionTime": 87.97
+    }
+  ]
+}

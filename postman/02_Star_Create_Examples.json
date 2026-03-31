@@ -1,0 +1,46 @@
+{
+  "examples": [
+    {
+      "id": 1,
+      "name": "Soleil",
+      "mass": 1.989,
+      "starType": "NAINE_JAUNE",
+      "temperature": 5778.0
+    },
+    {
+      "id": 2,
+      "name": "Proxima Centauri",
+      "mass": 0.1221,
+      "starType": "NAINE_ROUGE",
+      "temperature": 3042.0
+    },
+    {
+      "id": 3,
+      "name": "Bételgeuse",
+      "mass": 18.9,
+      "starType": "SUPERGEANTE_ROUGE",
+      "temperature": 3500.0
+    },
+    {
+      "id": 4,
+      "name": "Albireo B",
+      "mass": 5.9,
+      "starType": "GEANTE_BLEUE",
+      "temperature": 13200.0
+    },
+    {
+      "id": 5,
+      "name": "Bételgeuse Alt",
+      "mass": 16.5,
+      "starType": "GEANTE_ROUGE",
+      "temperature": 4000.0
+    },
+    {
+      "id": 6,
+      "name": "Gliese 667A",
+      "mass": 0.909,
+      "starType": "NAINE_BRUNE",
+      "temperature": 2700.0
+    }
+  ]
+}

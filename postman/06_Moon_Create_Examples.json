@@ -1,0 +1,68 @@
+{
+  "examples": [
+    {
+      "id": 1,
+      "name": "Lune",
+      "mass": 0.07342,
+      "planetId": 1,
+      "orbitingRadius": 0.3844,
+      "revolutionTime": 27.3
+    },
+    {
+      "id": 2,
+      "name": "Phobos",
+      "mass": 0.00001,
+      "planetId": 3,
+      "orbitingRadius": 0.009276,
+      "revolutionTime": 0.3189
+    },
+    {
+      "id": 3,
+      "name": "Deimos",
+      "mass": 0.000003,
+      "planetId": 3,
+      "orbitingRadius": 0.02346,
+      "revolutionTime": 1.2624
+    },
+    {
+      "id": 4,
+      "name": "Io",
+      "mass": 0.01496,
+      "planetId": 2,
+      "orbitingRadius": 0.4217,
+      "revolutionTime": 1.769
+    },
+    {
+      "id": 5,
+      "name": "Europe",
+      "mass": 0.008,
+      "planetId": 2,
+      "orbitingRadius": 0.6709,
+      "revolutionTime": 3.551
+    },
+    {
+      "id": 6,
+      "name": "Ganymède",
+      "mass": 0.0248,
+      "planetId": 2,
+      "orbitingRadius": 1.070,
+      "revolutionTime": 7.155
+    },
+    {
+      "id": 7,
+      "name": "Callisto",
+      "mass": 0.01834,
+      "planetId": 2,
+      "orbitingRadius": 1.883,
+      "revolutionTime": 16.689
+    },
+    {
+      "id": 8,
+      "name": "Titan",
+      "mass": 0.0225,
+      "planetId": 5,
+      "orbitingRadius": 1.222,
+      "revolutionTime": 15.945
+    }
+  ]
+}

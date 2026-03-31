@@ -1,0 +1,9 @@
+{
+  "name": "Terre",
+  "mass": 5.972,
+  "telluric": true,
+  "habitable": true,
+  "atmosphereComposition": "N2 78%, O2 21%, Ar 0.93%, autres gaz traces",
+  "orbitingRadius": 149.6,
+  "revolutionTime": 365.25
+}
