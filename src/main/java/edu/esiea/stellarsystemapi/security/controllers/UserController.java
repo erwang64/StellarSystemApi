@@ -2,8 +2,12 @@ package edu.esiea.stellarsystemapi.security.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import edu.esiea.stellarsystemapi.security.controllers.dto.LoginRequest;
 import edu.esiea.stellarsystemapi.security.controllers.dto.UserRequest;
 import edu.esiea.stellarsystemapi.security.controllers.dto.UserResponse;
 import edu.esiea.stellarsystemapi.security.controllers.dto.mappers.UserMapper;
@@ -21,9 +25,11 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService userService;
+    private final AuthenticationManager authenticationManager;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, AuthenticationManager authenticationManager) {
         this.userService = userService;
+        this.authenticationManager = authenticationManager;
     }
 
     @PostMapping
@@ -97,11 +103,17 @@ public class UserController {
 
     /**
      * Endpoint de login
-     * Il ne renvoie rien par défaut et reste vide pour le moment.
      */
     @PostMapping("/login")
-    public ResponseEntity<Void> login() {
-        // TODO: Implémenter la logique de login plus tard
-        return ResponseEntity.ok().build();
+    public ResponseEntity<String> login(@Valid @RequestBody LoginRequest loginRequest) {
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(loginRequest.getLogin(), loginRequest.getPassword())
+        );
+
+        if (authentication.isAuthenticated()) {
+            return ResponseEntity.ok("Login réussi !"); // Plus tard, retourner un token JWT ici
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Échec de l'authentification");
+        }
     }
 }

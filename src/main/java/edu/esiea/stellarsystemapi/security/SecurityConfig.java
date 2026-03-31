@@ -4,7 +4,10 @@ import java.util.List;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -15,19 +18,46 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import edu.esiea.stellarsystemapi.security.services.CustomUserDetailsService;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-	
+
+    private final CustomUserDetailsService customUserDetailsService;
+    private final PasswordEncoder passwordEncoder;
+
+    public SecurityConfig(CustomUserDetailsService customUserDetailsService, PasswordEncoder passwordEncoder) {
+        this.customUserDetailsService = customUserDetailsService;
+        this.passwordEncoder = passwordEncoder;
+    }
+
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.cors(Customizer.withDefaults())
 		    .csrf(csrf -> csrf.disable())
 		    .sessionManagement(session -> 
 		        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-		    .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+		    .authorizeHttpRequests(auth -> auth
+		    	// Permettre l'accès public au endpoint de login
+		    	.requestMatchers("/api/users/login").permitAll()
+		    	.anyRequest().permitAll()
+		    )
+		    .authenticationProvider(authenticationProvider());
 		
 		return http.build();
+	}
+	
+	@Bean
+	DaoAuthenticationProvider authenticationProvider() {
+		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(customUserDetailsService);
+		authProvider.setPasswordEncoder(passwordEncoder);
+		return authProvider;
+	}
+
+	@Bean
+	AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+		return authConfig.getAuthenticationManager();
 	}
 	
 	@Bean
@@ -43,11 +73,6 @@ public class SecurityConfig {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", config);
 		return source;
-	}
-	
-	@Bean
-	PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
 	}
 
 }
