@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"edu.esiea.stellarsystemapi.security.repositories","c":"UserRepository","l":"findByLogin(String)","u":"findByLogin(java.lang.String)"}];updateSearchResults();

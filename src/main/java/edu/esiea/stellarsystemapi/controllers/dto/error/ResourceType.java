@@ -4,5 +4,6 @@ public enum ResourceType {
 	STELLAR_SYSTEM,
 	STAR,
 	PLANET,
-	MOON
+	MOON,
+	USER
 }

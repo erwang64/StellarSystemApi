@@ -1,13 +1,18 @@
 package edu.esiea.stellarsystemapi.security.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import edu.esiea.stellarsystemapi.security.controllers.dto.UserRequest;
+import edu.esiea.stellarsystemapi.security.controllers.dto.UserResponse;
+import edu.esiea.stellarsystemapi.security.controllers.dto.mappers.UserMapper;
 import edu.esiea.stellarsystemapi.security.model.User;
 import edu.esiea.stellarsystemapi.security.services.UserService;
+import edu.esiea.stellarsystemapi.controllers.dto.error.EndPointException;
+import edu.esiea.stellarsystemapi.controllers.dto.error.ResourceType;
 import jakarta.validation.Valid;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -15,42 +20,55 @@ import java.util.Optional;
 @RequestMapping("/api/users")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
-        User createdUser = userService.createUser(user);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
+    public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) throws EndPointException {
+        try {
+            User user = UserMapper.toEntity(userRequest);
+            User createdUser = userService.createUser(user);
+            return ResponseEntity.status(HttpStatus.CREATED).body(UserMapper.toDto(createdUser));
+        } catch (Exception e) {
+            throw new EndPointException(HttpStatus.BAD_REQUEST, e.getMessage(), ResourceType.USER, e);
+        }
     }
-
 
     @GetMapping("/all")
-    public ResponseEntity<List<User>> getAllUsers() {
+    public ResponseEntity<List<UserResponse>> getAllUsers() {
         List<User> users = userService.getAllUsers();
-        return ResponseEntity.ok(users);
+        return ResponseEntity.ok(UserMapper.toDtoList(users));
     }
-
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable int id) {
+    public ResponseEntity<UserResponse> getUserById(@PathVariable int id) throws EndPointException {
         Optional<User> user = userService.getUserById(id);
-        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        if (user.isEmpty()) {
+            throw new EndPointException(HttpStatus.NOT_FOUND, "Utilisateur non trouvé", ResourceType.USER, null, id);
+        }
+        return ResponseEntity.ok(UserMapper.toDto(user.get()));
     }
 
-    
     @GetMapping("/login/{login}")
-    public ResponseEntity<User> findByLogin(@PathVariable String login) {
+    public ResponseEntity<UserResponse> findByLogin(@PathVariable String login) throws EndPointException {
         Optional<User> user = userService.findByLogin(login);
-        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        if (user.isEmpty()) {
+            throw new EndPointException(HttpStatus.NOT_FOUND, "Utilisateur non trouvé avec le login: " + login, ResourceType.USER, null);
+        }
+        return ResponseEntity.ok(UserMapper.toDto(user.get()));
     }
-
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable int id, @Valid @RequestBody User userDetails) {
+    public ResponseEntity<UserResponse> updateUser(@PathVariable int id, @Valid @RequestBody UserRequest userDetails) throws EndPointException {
         Optional<User> existingUser = userService.getUserById(id);
-        if (existingUser.isPresent()) {
+        if (existingUser.isEmpty()) {
+            throw new EndPointException(HttpStatus.NOT_FOUND, "Utilisateur non trouvé", ResourceType.USER, null, id);
+        }
+
+        try {
             User user = existingUser.get();
             if (userDetails.getLogin() != null) {
                 user.setLogin(userDetails.getLogin());
@@ -59,21 +77,31 @@ public class UserController {
                 user.setPassword(userDetails.getPassword());
             }
             if (userDetails.getProfile() != null) {
-                user.setProfile(userDetails.getProfile());
+                user.setProfile(edu.esiea.stellarsystemapi.security.model.Profile.valueOf(userDetails.getProfile().toUpperCase()));
             }
             User updatedUser = userService.updateUser(user);
-            return ResponseEntity.ok(updatedUser);
+            return ResponseEntity.ok(UserMapper.toDto(updatedUser));
+        } catch (Exception e) {
+            throw new EndPointException(HttpStatus.BAD_REQUEST, e.getMessage(), ResourceType.USER, e);
         }
-        return ResponseEntity.notFound().build();
     }
 
-    
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable int id) {
+    public ResponseEntity<Void> deleteUser(@PathVariable int id) throws EndPointException {
         if (userService.getUserById(id).isPresent()) {
             userService.deleteUser(id);
             return ResponseEntity.noContent().build();
         }
-        return ResponseEntity.notFound().build();
+        throw new EndPointException(HttpStatus.NOT_FOUND, "Utilisateur non trouvé", ResourceType.USER, null, id);
+    }
+
+    /**
+     * Endpoint de login
+     * Il ne renvoie rien par défaut et reste vide pour le moment.
+     */
+    @PostMapping("/login")
+    public ResponseEntity<Void> login() {
+        // TODO: Implémenter la logique de login plus tard
+        return ResponseEntity.ok().build();
     }
 }
