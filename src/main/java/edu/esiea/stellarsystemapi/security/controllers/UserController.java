@@ -1,10 +1,13 @@
 package edu.esiea.stellarsystemapi.security.controllers;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import edu.esiea.stellarsystemapi.security.controllers.dto.LoginRequest;
@@ -12,12 +15,14 @@ import edu.esiea.stellarsystemapi.security.controllers.dto.UserRequest;
 import edu.esiea.stellarsystemapi.security.controllers.dto.UserResponse;
 import edu.esiea.stellarsystemapi.security.controllers.dto.mappers.UserMapper;
 import edu.esiea.stellarsystemapi.security.model.User;
+import edu.esiea.stellarsystemapi.security.services.JwtService;
 import edu.esiea.stellarsystemapi.security.services.UserService;
 import edu.esiea.stellarsystemapi.controllers.dto.error.EndPointException;
 import edu.esiea.stellarsystemapi.controllers.dto.error.ResourceType;
 import jakarta.validation.Valid;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -26,12 +31,15 @@ public class UserController {
 
     private final UserService userService;
     private final AuthenticationManager authenticationManager;
+    private final JwtService jwtService;
 
-    public UserController(UserService userService, AuthenticationManager authenticationManager) {
+    public UserController(UserService userService, AuthenticationManager authenticationManager, JwtService jwtService) {
         this.userService = userService;
         this.authenticationManager = authenticationManager;
+        this.jwtService = jwtService;
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) throws EndPointException {
         try {
@@ -105,15 +113,19 @@ public class UserController {
      * Endpoint de login
      */
     @PostMapping("/login")
-    public ResponseEntity<String> login(@Valid @RequestBody LoginRequest loginRequest) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getLogin(), loginRequest.getPassword())
-        );
-
-        if (authentication.isAuthenticated()) {
-            return ResponseEntity.ok("Login réussi !"); // Plus tard, retourner un token JWT ici
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Échec de l'authentification");
+    public ResponseEntity<Void> login(@RequestBody UserRequest dto) throws EndPointException {
+        if (dto.getLogin() == null || dto.getLogin().isBlank() || dto.getPassword() == null || dto.getPassword().isBlank()) {
+            throw new EndPointException(HttpStatus.BAD_REQUEST, "Login ou mot de passe non fourni", ResourceType.USER, null);
         }
+
+        Authentication authentication = this.authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(dto.getLogin(), dto.getPassword())
+        );
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String jwt = this.jwtService.generateToken(userDetails);
+        
+        return ResponseEntity.noContent()
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + jwt)
+                .build();
     }
 }
