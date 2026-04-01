@@ -3,3 +3,6 @@
 2026-04-01 11:05:29,166 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-3] Access denied : Access Denied
 2026-04-01 11:08:11,290 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-8] Access denied : Access Denied
 2026-04-01 11:08:55,219 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-2] Access denied : Access Denied
+2026-04-01 15:14:10,166 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-3] PLANET : Impossible de créer la planète, une autre existe déjà avec le nom "Terre"
+2026-04-01 15:17:26,219 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] POST  /api/StellarSystem
+2026-04-01 15:17:26,344 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] Système créé

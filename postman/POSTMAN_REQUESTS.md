@@ -73,6 +73,24 @@ http://localhost:8080/api
 
 ---
 
+### 4️⃣ SYSTÈMES STELLAIRES (StellarSystem)
+
+#### Créer un système stellaire (POST)
+- **URL**: `POST http://localhost:8080/api/StellarSystem`
+- **Body**: Utiliser le contenu de `07_StellarSystem_Create.json`
+- **Header**: `Content-Type: application/json`
+- **Réponse**: 201 Created
+
+#### Récupérer tous les systèmes (GET)
+- **URL**: `GET http://localhost:8080/api/StellarSystem/all`
+- **Réponse**: Liste de tous les systèmes
+
+#### Récupérer un système par ID (GET)
+- **URL**: `GET http://localhost:8080/api/StellarSystem/{id}`
+- **Exemple**: `GET http://localhost:8080/api/StellarSystem/1`
+
+---
+
 ## 📋 Types d'Étoiles (StarType) - Valeurs Acceptées
 
 ```json
