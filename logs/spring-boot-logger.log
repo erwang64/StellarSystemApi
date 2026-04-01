@@ -1,3 +1,5 @@
-2026-03-31 15:51:41,240 WARN edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] USER : Erreur(s) de validation : login -> la taille doit être comprise entre 8 et 30
-2026-03-31 16:01:45,041 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-2] Access denied : Access Denied
-2026-03-31 16:48:55,055 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-4] Access denied : Access Denied
+2026-04-01 11:02:09,330 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-4] Access denied : Access Denied
+2026-04-01 11:05:14,283 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-2] USER : Erreur(s) de validation : login -> la taille doit être comprise entre 8 et 30
+2026-04-01 11:05:29,166 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-3] Access denied : Access Denied
+2026-04-01 11:08:11,290 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-8] Access denied : Access Denied
+2026-04-01 11:08:55,219 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-2] Access denied : Access Denied

@@ -1,0 +1,18 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< edu.esiea:stellarsystemapi >---------------------
+[INFO] Building stellarsystemapi 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.9.0:list (default-cli) @ stellarsystemapi ---
+[INFO] 
+[INFO] The following files have been resolved:
+[INFO]    com.h2database:h2:jar:2.4.240:compile -- module com.h2database [auto]
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.052 s
+[INFO] Finished at: 2026-04-01T10:56:01+02:00
+[INFO] ------------------------------------------------------------------------
