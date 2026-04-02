@@ -113,7 +113,7 @@ public class UserController {
      * Endpoint de login
      */
     @PostMapping("/login")
-    public ResponseEntity<Void> login(@RequestBody UserRequest dto) throws EndPointException {
+    public ResponseEntity<User> login(@RequestBody UserRequest dto) throws EndPointException {
         if (dto.getLogin() == null || dto.getLogin().isBlank() || dto.getPassword() == null || dto.getPassword().isBlank()) {
             throw new EndPointException(HttpStatus.BAD_REQUEST, "Login ou mot de passe non fourni", ResourceType.USER, null);
         }
@@ -124,8 +124,9 @@ public class UserController {
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         String jwt = this.jwtService.generateToken(userDetails);
         
-        return ResponseEntity.noContent()
-                .header(HttpHeaders.AUTHORIZATION, "Bearer " + jwt)
-                .build();
+        Optional<User> opt = userService.findByLogin(dto.getLogin());
+        
+        return ResponseEntity.ok()
+                .header(HttpHeaders.AUTHORIZATION, "Bearer " + jwt).body(opt.get());
     }
 }
