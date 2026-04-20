@@ -84,7 +84,7 @@ public class SecurityConfig {
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
-		config.setAllowedOrigins(List.of("http://localhost:4200"));
+		config.setAllowedOrigins(List.of("http://localhost:4200", "https://7948-2a0d-e487-419e-a2ec-3597-9a4c-d3ec-10d9.ngrok-free.app/"));
 		config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH" , "OPTIONS"));
 		config.setAllowedHeaders(List.of("Authorization" , "Content-Type"));
 		config.setExposedHeaders(List.of("Authorization"));

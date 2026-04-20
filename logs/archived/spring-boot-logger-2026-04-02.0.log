@@ -1,0 +1,9 @@
+2026-04-02 11:20:16,185 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-4] Access denied : Access Denied
+2026-04-02 14:42:30,389 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-9] USER : Login ou mot de passe non fourni
+2026-04-02 14:42:30,429 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-10] USER : Login ou mot de passe non fourni
+2026-04-02 16:07:03,366 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-1] POST  /api/StellarSystem
+2026-04-02 16:07:03,512 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-1] Système créé
+2026-04-02 16:09:32,562 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-8] POST  /api/StellarSystem
+2026-04-02 16:09:32,582 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-8] Système créé
+2026-04-02 17:11:03,001 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-1] POST  /api/StellarSystem
+2026-04-02 17:11:03,092 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-1] Système créé

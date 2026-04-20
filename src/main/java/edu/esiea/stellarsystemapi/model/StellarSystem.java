@@ -24,7 +24,7 @@ public class StellarSystem {
 	@Column(name = "Id")
 	private int id;
 	
-	@Column(name = "name", nullable = false)
+	@Column(name = "name", nullable = false , unique = true)
 	private String name;
 	
 	@Column(name = "posX", nullable = false)

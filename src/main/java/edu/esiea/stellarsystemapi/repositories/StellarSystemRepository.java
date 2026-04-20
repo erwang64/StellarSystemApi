@@ -12,7 +12,7 @@ public interface StellarSystemRepository extends JpaRepository<StellarSystem, In
 	
 	Optional<StellarSystem> findByName(String name);
 	
-	Optional<StellarSystem> findByPosXAndPosY(Integer posX, Integer posY);
+	Optional<StellarSystem> findByPosXAndPosY(int posX,  int posY);
 	
 	Optional<StellarSystem> findByStarId(int starId);
 	

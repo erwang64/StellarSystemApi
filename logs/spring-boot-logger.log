@@ -1,8 +1,32 @@
-2026-04-01 11:02:09,330 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-4] Access denied : Access Denied
-2026-04-01 11:05:14,283 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-2] USER : Erreur(s) de validation : login -> la taille doit être comprise entre 8 et 30
-2026-04-01 11:05:29,166 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-3] Access denied : Access Denied
-2026-04-01 11:08:11,290 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-8] Access denied : Access Denied
-2026-04-01 11:08:55,219 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-2] Access denied : Access Denied
-2026-04-01 15:14:10,166 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-3] PLANET : Impossible de créer la planète, une autre existe déjà avec le nom "Terre"
-2026-04-01 15:17:26,219 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] POST  /api/StellarSystem
-2026-04-01 15:17:26,344 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] Système créé
+2026-04-03 14:17:28,191 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-9] DELETE  /api/StellarSystem/{id}
+2026-04-03 14:17:28,294 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-9] Delete du système réussi
+2026-04-03 14:31:11,161 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] DELETE  /api/StellarSystem/{id}
+2026-04-03 14:31:11,174 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] Delete du système réussi
+2026-04-03 14:41:09,322 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-4] DELETE  /api/StellarSystem/{id}
+2026-04-03 14:41:09,332 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-4] Delete du système réussi
+2026-04-03 14:41:35,666 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-6] POST  /api/StellarSystem
+2026-04-03 14:41:35,718 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-6] Système créé
+2026-04-03 14:41:41,520 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-9] DELETE  /api/StellarSystem/{id}
+2026-04-03 14:41:41,527 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-9] Delete du système réussi
+2026-04-03 14:45:25,891 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] POST  /api/StellarSystem
+2026-04-03 14:45:25,900 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-2] Système créé
+2026-04-03 14:45:57,940 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-5] DELETE  /api/StellarSystem/{id}
+2026-04-03 14:45:57,946 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-5] Delete du système réussi
+2026-04-03 15:48:45,965 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-3] PUT  /api/StellarSystem/{id}
+2026-04-03 15:48:46,066 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-3] Modification PUT du système réussi
+2026-04-03 15:50:21,325 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-10] POST  /api/StellarSystem
+2026-04-03 15:50:21,341 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-10] Système créé
+2026-04-03 15:51:11,972 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-3] PUT  /api/StellarSystem/{id}
+2026-04-03 15:51:11,975 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-3] Modification PUT du système réussi
+2026-04-03 16:03:06,507 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-7] STELLAR_SYSTEM : Erreur(s) de validation : name -> la taille doit être comprise entre 2 et 2147483647
+2026-04-03 16:03:06,528 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-8] STELLAR_SYSTEM : Erreur(s) de validation : name -> la taille doit être comprise entre 2 et 2147483647
+2026-04-03 16:03:08,106 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-9] STELLAR_SYSTEM : Erreur(s) de validation : name -> la taille doit être comprise entre 2 et 2147483647
+2026-04-03 16:03:08,116 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [http-nio-8080-exec-10] STELLAR_SYSTEM : Erreur(s) de validation : name -> la taille doit être comprise entre 2 et 2147483647
+2026-04-03 16:03:37,978 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-1] POST  /api/StellarSystem
+2026-04-03 16:03:37,994 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-1] Système créé
+2026-04-03 16:03:48,008 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-5] PUT  /api/StellarSystem/{id}
+2026-04-03 16:03:48,018 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-5] Modification PUT du système réussi
+2026-04-03 16:03:51,385 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-8] DELETE  /api/StellarSystem/{id}
+2026-04-03 16:03:51,402 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-8] Delete du système réussi
+2026-04-03 16:21:53,347 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-4] PUT  /api/StellarSystem/{id}
+2026-04-03 16:21:53,404 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [http-nio-8080-exec-4] Modification PUT du système réussi

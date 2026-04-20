@@ -41,7 +41,7 @@ public class Planet extends AbstractCelestialBody {
 	@Column(name = "revolutionTime")
 	protected float revolutionTime;
 
-	public Planet(final String name, final float mass, final Star centralBody, final float orbitingRadius,
+	public Planet(final String name, final float mass, final float orbitingRadius,
 			final float revolutionTime, final boolean habitable, final boolean telluric,
 			final String atmosphereComposition) {
 		super(name, mass);
@@ -49,6 +49,8 @@ public class Planet extends AbstractCelestialBody {
 		this.telluric = telluric;
 		this.atmosphereComposition = atmosphereComposition;
 	}
+	
+	//final Star centralBody
 	
 	public Planet() {
 	    super();
