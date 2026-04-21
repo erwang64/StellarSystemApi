@@ -1,0 +1,44 @@
+2026-04-20 14:50:31,252 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.8 with PID 5264 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-20 14:50:31,255 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-20 14:50:31,256 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-20 14:50:34,006 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.268 seconds (process running for 4.571)
+2026-04-20 14:50:34,298 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-20 14:50:34,309 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-20 15:42:57,122 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 28524 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-20 15:42:57,125 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-20 15:42:57,125 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-20 15:43:01,400 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 5.166 seconds (process running for 6.807)
+2026-04-20 15:43:01,812 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-20 15:43:01,830 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-20 15:46:50,648 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 24244 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-20 15:46:50,649 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-20 15:46:50,650 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-20 15:46:53,351 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.265 seconds (process running for 4.819)
+2026-04-20 15:46:53,652 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-20 15:46:53,663 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-20 15:47:02,485 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 26460 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-20 15:47:02,486 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-20 15:47:02,486 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-20 15:47:05,108 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.133 seconds (process running for 4.428)
+2026-04-20 15:47:05,425 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-20 15:47:05,435 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-20 15:47:05,720 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Erreur(s) de validation : name -> must not be blank
+2026-04-20 15:47:43,224 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 34156 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-20 15:47:43,225 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-20 15:47:43,226 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-20 15:47:45,938 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.172 seconds (process running for 4.47)
+2026-04-20 15:47:46,162 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-20 15:47:46,173 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-20 15:47:46,482 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Erreur(s) de validation : name -> must not be blank
+2026-04-20 15:47:46,508 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] DELETE  /api/StellarSystem/{id}
+2026-04-20 15:47:46,508 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Delete du système réussi
+2026-04-20 15:48:28,684 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 29840 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-20 15:48:28,685 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-20 15:48:28,686 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-20 15:48:31,286 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.094 seconds (process running for 4.523)
+2026-04-20 15:48:31,592 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-20 15:48:31,602 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-20 15:48:32,008 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] POST  /api/StellarSystem
+2026-04-20 15:48:32,009 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système créé
+2026-04-20 15:48:32,029 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] DELETE  /api/StellarSystem/{id}
+2026-04-20 15:48:32,030 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Delete du système réussi
