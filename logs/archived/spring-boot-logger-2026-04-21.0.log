@@ -1,0 +1,98 @@
+2026-04-21 08:52:23,706 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 31868 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 08:52:23,709 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 08:52:23,709 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-21 08:52:26,440 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.282 seconds (process running for 4.601)
+2026-04-21 08:52:26,713 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-21 08:52:26,720 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-21 08:52:27,118 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] POST  /api/StellarSystem
+2026-04-21 08:52:27,118 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système créé
+2026-04-21 08:52:27,141 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] DELETE  /api/StellarSystem/{id}
+2026-04-21 08:52:27,141 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Delete du système réussi
+2026-04-21 08:52:27,159 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] PUT  /api/StellarSystem/{id}
+2026-04-21 08:52:27,166 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Ressource non trouvée
+2026-04-21 08:52:27,229 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Erreur(s) de validation : name -> size must be between 2 and 2147483647 / name -> must not be blank
+2026-04-21 08:52:27,252 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Erreur(s) de validation : posX -> must not be null / posY -> must not be null
+2026-04-21 09:55:32,901 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.9 with PID 35092 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 09:55:32,902 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 09:55:32,903 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-21 09:55:35,745 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 3.379 seconds (process running for 4.669)
+2026-04-21 09:55:36,107 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-21 09:55:36,119 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-21 09:55:36,478 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] POST  /api/StellarSystem
+2026-04-21 09:55:36,478 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système créé
+2026-04-21 09:55:36,497 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] DELETE  /api/StellarSystem/{id}
+2026-04-21 09:55:36,497 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Delete du système réussi
+2026-04-21 09:55:36,517 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] PUT  /api/StellarSystem/{id}
+2026-04-21 09:55:36,517 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Modification PUT du système réussi
+2026-04-21 09:55:36,568 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Erreur(s) de validation : name -> must not be blank / name -> size must be between 2 and 2147483647
+2026-04-21 09:55:36,592 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Patch  /api/StellarSystem/{id}
+2026-04-21 09:55:36,592 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Modification PATCH du système réussi
+2026-04-21 09:57:35,208 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 37860 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 09:57:35,211 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 09:57:35,211 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 1 profile is active: "test"
+2026-04-21 10:02:55,028 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 10180 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:02:55,030 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:02:55,030 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:07:57,457 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 29840 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:07:57,459 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:07:57,460 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:15:04,256 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 6656 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:15:04,258 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:15:04,260 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:18:28,313 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 9996 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:18:28,315 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:18:28,317 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:33:49,827 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 35604 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:33:49,827 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:33:49,830 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:33:57,046 DEBUG edu.esiea.stellarsystemapi.controllers.JwtAuthenticationFilterTest [main] Filter 'jwtAuthenticationFilterTest' configured for use
+2026-04-21 10:33:57,082 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Started StellarSystemControllerSecurityCorsTest in 7.693 seconds (process running for 8.912)
+2026-04-21 10:35:14,160 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 5976 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:35:14,162 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:35:14,164 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:35:24,195 DEBUG edu.esiea.stellarsystemapi.controllers.JwtAuthenticationFilterTest [main] Filter 'jwtAuthenticationFilterTest' configured for use
+2026-04-21 10:35:24,229 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Started StellarSystemControllerSecurityCorsTest in 11.143 seconds (process running for 12.548)
+2026-04-21 10:36:18,573 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 36536 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:36:18,575 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:36:18,575 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:36:26,737 DEBUG edu.esiea.stellarsystemapi.controllers.JwtAuthenticationFilterTest [main] Filter 'jwtAuthenticationFilterTest' configured for use
+2026-04-21 10:36:26,775 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Started StellarSystemControllerSecurityCorsTest in 8.68 seconds (process running for 9.885)
+2026-04-21 10:37:21,395 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.9 with PID 33192 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:37:21,395 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:37:21,395 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:37:33,095 DEBUG edu.esiea.stellarsystemapi.controllers.JwtAuthenticationFilterTest [main] Filter 'jwtAuthenticationFilterTest' configured for use
+2026-04-21 10:37:33,134 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Started StellarSystemControllerSecurityCorsTest in 12.17 seconds (process running for 13.844)
+2026-04-21 10:37:33,307 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-21 10:37:33,311 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Ressource non trouvée
+2026-04-21 10:37:33,398 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] Access denied : Access Denied
+2026-04-21 10:39:08,728 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.8 with PID 24308 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 10:39:08,729 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 10:39:08,733 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 10:39:16,055 DEBUG edu.esiea.stellarsystemapi.controllers.JwtAuthenticationFilterTest [main] Filter 'jwtAuthenticationFilterTest' configured for use
+2026-04-21 10:39:16,090 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Started StellarSystemControllerSecurityCorsTest in 7.908 seconds (process running for 9.6)
+2026-04-21 10:39:16,236 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-21 10:39:16,243 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Ressource non trouvée
+2026-04-21 10:39:16,328 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] Access denied : Access Denied
+2026-04-21 11:35:47,610 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Starting StellarSystemControllerSecurityCorsTest using Java 21.0.8 with PID 7308 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 11:35:47,612 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 11:35:47,613 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] The following 2 profiles are active: "test", "JWTtest"
+2026-04-21 11:35:48,973 DEBUG edu.esiea.stellarsystemapi.controllers.JwtAuthenticationFilterTest [main] Filter 'jwtAuthenticationFilterTest' configured for use
+2026-04-21 11:35:49,023 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerSecurityCorsTest [main] Started StellarSystemControllerSecurityCorsTest in 1.445 seconds (process running for 15.354)
+2026-04-21 11:35:49,403 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-21 11:35:49,408 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Ressource non trouvée
+2026-04-21 11:35:49,587 ERROR edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] Access denied : Access Denied
+2026-04-21 11:35:49,700 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Starting StellarSystemControllerTest using Java 21.0.8 with PID 7308 (started by freew in C:\Users\freew\Documents\workspace-spring-tools-for-eclipse-5.0.1.RELEASE\stellarsystemapi)
+2026-04-21 11:35:49,700 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-21 11:35:49,700 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] The following 1 profile is active: "test"
+2026-04-21 11:35:50,040 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemControllerTest [main] Started StellarSystemControllerTest in 0.383 seconds (process running for 16.371)
+2026-04-21 11:35:50,048 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] GET  /api/StellarSystem/all
+2026-04-21 11:35:50,050 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système trouvé
+2026-04-21 11:35:50,235 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] POST  /api/StellarSystem
+2026-04-21 11:35:50,237 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Système créé
+2026-04-21 11:35:50,251 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] DELETE  /api/StellarSystem/{id}
+2026-04-21 11:35:50,252 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Delete du système réussi
+2026-04-21 11:35:50,269 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] PUT  /api/StellarSystem/{id}
+2026-04-21 11:35:50,269 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Modification PUT du système réussi
+2026-04-21 11:35:50,315 WARN edu.esiea.stellarsystemapi.controllers.ErrorHandler [main] STELLAR_SYSTEM : Erreur(s) de validation : name -> must not be blank / name -> size must be between 2 and 2147483647
+2026-04-21 11:35:50,334 DEBUG edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Patch  /api/StellarSystem/{id}
+2026-04-21 11:35:50,334 INFO edu.esiea.stellarsystemapi.controllers.StellarSystemController [main] Modification PATCH du système réussi

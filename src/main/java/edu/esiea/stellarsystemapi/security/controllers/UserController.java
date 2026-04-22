@@ -17,6 +17,8 @@ import edu.esiea.stellarsystemapi.security.controllers.dto.mappers.UserMapper;
 import edu.esiea.stellarsystemapi.security.model.User;
 import edu.esiea.stellarsystemapi.security.services.JwtService;
 import edu.esiea.stellarsystemapi.security.services.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import edu.esiea.stellarsystemapi.controllers.dto.error.EndPointException;
 import edu.esiea.stellarsystemapi.controllers.dto.error.ResourceType;
 import jakarta.validation.Valid;
@@ -39,6 +41,8 @@ public class UserController {
         this.jwtService = jwtService;
     }
 
+    @Operation(summary = "Creation d'un user", description = "Que le role ADMIN")
+    @SecurityRequirement(name = "bearerAuth")
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) throws EndPointException {

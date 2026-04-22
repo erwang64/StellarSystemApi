@@ -9,6 +9,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -36,9 +37,11 @@ import edu.esiea.stellarsystemapi.services.PlanetService;
 import edu.esiea.stellarsystemapi.services.StarService;
 import edu.esiea.stellarsystemapi.services.StellarSystemService;
 
+import static org.mockito.Mockito.doAnswer;
+
 @SpringBootTest
 @AutoConfigureMockMvc
-@ActiveProfiles("test")
+@ActiveProfiles({ "test", "JWTtest" })
 class StellarSystemControllerSecurityCorsTest {
 
 	@Autowired
@@ -50,9 +53,18 @@ class StellarSystemControllerSecurityCorsTest {
     @MockitoBean
     private StellarSystemService sysService;
 
+    @MockitoBean
+    private edu.esiea.stellarsystemapi.security.filters.JwtAuthenticationFilter jwtAuthenticationFilter;
+
 
     @BeforeEach
-    void setup() {
+    void setup() throws Exception {
+        doAnswer(invocation -> {
+            jakarta.servlet.FilterChain chain = invocation.getArgument(2);
+            chain.doFilter(invocation.getArgument(0), invocation.getArgument(1));
+            return null;
+        }).when(jwtAuthenticationFilter).doFilter(any(), any(), any());
+
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)
                 .apply(SecurityMockMvcConfigurers.springSecurity()).build();
     }
@@ -73,6 +85,24 @@ class StellarSystemControllerSecurityCorsTest {
         this.mockMvc.perform(get("/api/StellarSystem/1")
                 .header("Origin", "http://localhost:4200"))
                 .andExpect(status().isForbidden());
+    }
+    
+    @Test
+    @WithMockUser(roles = "USER")
+    void shouldAllowCorsForConfiguredOrigin() throws Exception {
+        when(this.sysService.getStellarSystem(1)).thenReturn(Optional.empty());
+        this.mockMvc.perform(get("/api/system/1").header("Origin", "http://localhost:4200"))
+                .andExpect(status().isNotFound())
+                .andExpect(header().string("Access-Control-Allow-Origin", "http://localhost:4200"));
+    }
+
+    @Test
+    @WithMockUser(roles = "USER")
+    void shouldRejectCorsForUnknownOrigin() throws Exception {
+        when(this.sysService.getStellarSystem(1)).thenReturn(Optional.empty());
+        this.mockMvc.perform(get("/api/system/1").header("Origin", "http://couscous.com"))
+                .andExpect(status().isForbidden())
+                .andExpect(header().doesNotExist("Access-Control-Allow-Origin"));
     }
 	
 }
